@@ -1,0 +1,33 @@
+{
+    "manifestVersion": 1,
+    "id": "kubelogger",
+    "name": "Kubernetes Connection Logger",
+    "version": "0.0.2",
+    "publisher": "VijayMa",
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],    
+    "description": "Kubernetes utilities. Includes one task for logging the connection.",
+    "categories": [
+        "Azure Pipelines"
+    ],
+    "files": [
+        {
+            "path": "kubelogger"
+        }
+    ],
+    "contributions": [
+        {
+            "id": "custom-build-release-task",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "kubelogger"
+            }
+        }
+    ]
+}
